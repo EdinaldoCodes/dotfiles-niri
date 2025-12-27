@@ -1,0 +1,20 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+// --- Inicialização Segura ---
+spawn-at-startup "qs" "-c" "noctalia-shell"
+
+// Inicia a barra (Waybar)
+//spawn-at-startup "waybar"
+
+// Inicia o papel de parede (ajuste o caminho se quiser, ou deixe o padrão do CachyOS)
+spawn-at-startup "swaybg" "-i" "/usr/share/backgrounds/cachyos-wallpapers/liquid.png" "-m" "fill"
+
+// Inicia o daemon de notificações
+spawn-at-startup "swaync"
+
+// Inicia o suporte a apps antigos (jogos/discord)
+spawn-at-startup "xwayland-satellite"
+
+// Autenticação (para pedir senha quando abrir programas admin)
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
